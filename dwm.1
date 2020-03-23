@@ -5,9 +5,9 @@ dwm \- dynamic window manager
 .B dwm
 .RB [ \-v ]
 .SH DESCRIPTION
-dwm is a dynamic window manager for X. It manages windows in tiled, monocle
-and floating layouts. Either layout can be applied dynamically, optimising the
-environment for the application in use and the task performed.
+dwm is a dynamic window manager for X. It manages windows in various layouts.
+Either layout can be applied dynamically, optimising the environment for the
+application in use and the task performed.
 .P
 In tiled layouts windows are managed in a master and stacking area. The master
 area on the left contains one window by default, and the stacking area on the
@@ -28,6 +28,13 @@ before the windows title.  The selected tags are indicated with a different
 color. The tags of the focused window are indicated with a filled square in the
 top left corner.  The tags which are applied to one or more windows are
 indicated with an empty square in the top left corner.
+.P
+This build of dwm has no keybindings, but instead it is advised that the
+included script
+.BR dwmc (1)
+is used with something like
+.BR sxhkd (1)
+to handle keypresses.
 .P
 dwm draws a small border around windows to indicate the focus state.
 .SH OPTIONS
@@ -54,94 +61,6 @@ click on a tag label applies that tag to the focused window.
 .TP
 .B Mod1\-Button3
 click on a tag label adds/removes that tag to/from the focused window.
-.SS Keyboard commands
-.TP
-.B Mod1\-Shift\-Return
-Start
-.BR st(1).
-.TP
-.B Mod1\-p
-Spawn
-.BR dmenu(1)
-for launching other programs.
-.TP
-.B Mod1\-,
-Focus previous screen, if any.
-.TP
-.B Mod1\-.
-Focus next screen, if any.
-.TP
-.B Mod1\-Shift\-,
-Send focused window to previous screen, if any.
-.TP
-.B Mod1\-Shift\-.
-Send focused window to next screen, if any.
-.TP
-.B Mod1\-b
-Toggles bar on and off.
-.TP
-.B Mod1\-t
-Sets tiled layout.
-.TP
-.B Mod1\-f
-Sets floating layout.
-.TP
-.B Mod1\-m
-Sets monocle layout.
-.TP
-.B Mod1\-space
-Toggles between current and previous layout.
-.TP
-.B Mod1\-j
-Focus next window.
-.TP
-.B Mod1\-k
-Focus previous window.
-.TP
-.B Mod1\-i
-Increase number of windows in master area.
-.TP
-.B Mod1\-d
-Decrease number of windows in master area.
-.TP
-.B Mod1\-l
-Increase master area size.
-.TP
-.B Mod1\-h
-Decrease master area size.
-.TP
-.B Mod1\-Return
-Zooms/cycles focused window to/from master area (tiled layouts only).
-.TP
-.B Mod1\-Shift\-c
-Close focused window.
-.TP
-.B Mod1\-Shift\-space
-Toggle focused window between tiled and floating state.
-.TP
-.B Mod1\-Tab
-Toggles to the previously selected tags.
-.TP
-.B Mod1\-Shift\-[1..n]
-Apply nth tag to focused window.
-.TP
-.B Mod1\-Shift\-0
-Apply all tags to focused window.
-.TP
-.B Mod1\-Control\-Shift\-[1..n]
-Add/remove nth tag to/from focused window.
-.TP
-.B Mod1\-[1..n]
-View all windows with nth tag.
-.TP
-.B Mod1\-0
-View all windows with any tag.
-.TP
-.B Mod1\-Control\-[1..n]
-Add/remove all windows with nth tag to/from the view.
-.TP
-.B Mod1\-Shift\-q
-Quit dwm.
 .SS Mouse commands
 .TP
 .B Mod1\-Button1
@@ -157,7 +76,9 @@ dwm is customized by creating a custom config.h and (re)compiling the source
 code. This keeps it fast, secure and simple.
 .SH SEE ALSO
 .BR dmenu (1),
-.BR st (1)
+.BR dwmc (1),
+.BR st (1),
+.BR sxhkd (1)
 .SH ISSUES
 Java applications which use the XToolkit/XAWT backend may draw grey windows
 only. The XToolkit/XAWT backend breaks ICCCM-compliance in recent JDK 1.5 and early
@@ -173,4 +94,5 @@ or
 XToolkit/XAWT backend can recognize) or when using OpenJDK setting the environment variable
 .BR _JAVA_AWT_WM_NONREPARENTING=1 .
 .SH BUGS
-Send all bug reports with a patch to hackers@suckless.org.
+Send all bug reports with a patch to ben@benoneill.xyz since this is a custom build and not
+all changes may work on mainline dwm.
