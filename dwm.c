@@ -996,6 +996,7 @@ grabbuttons(Client *c, int focused)
 void
 grabkeys(void)
 {
+	/*
 	updatenumlockmask();
 	{
 		unsigned int i, j;
@@ -1009,6 +1010,7 @@ grabkeys(void)
 					XGrabKey(dpy, code, keys[i].mod | modifiers[j], root,
 						True, GrabModeAsync, GrabModeAsync);
 	}
+	*/
 }
 
 void
@@ -1033,6 +1035,7 @@ isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *info)
 void
 keypress(XEvent *e)
 {
+	/*
 	unsigned int i;
 	KeySym keysym;
 	XKeyEvent *ev;
@@ -1044,6 +1047,7 @@ keypress(XEvent *e)
 		&& CLEANMASK(keys[i].mod) == CLEANMASK(ev->state)
 		&& keys[i].func)
 			keys[i].func(&(keys[i].arg));
+	*/
 }
 
 int
