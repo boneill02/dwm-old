@@ -1,0 +1,53 @@
+.TH DWMC 1 dwm\-VERSION
+.SH NAME
+dwmc \- dwm control script
+.SH SYNOPSIS
+.B dwmc
+cmd [arg]
+.SH DESCRIPTION
+dwmc controls dwm by sending signals to the process using
+.BR xsetroot (1).
+It was built to be used with
+.BR sxhkd (1).
+.SH COMMANDS
+.TP
+.B viewall
+view all tags at once.
+.TP
+.B togglebar
+toggle whether the status bar is shown.
+.TP
+.B togglefloating
+toggle floating windows.
+.TP
+.B killclient
+kill the currently focused client.
+.TP
+.B quit
+exit dwm.
+.TP
+.B viewex [0-8]
+switch to tag [0-8] (first tag is 0). All open tags will be closed first.
+.TP
+.B toggleviewex [0-8]
+toggle tag [0-8] (first tag is 0). All open tags will remain open.
+.TP
+.B setlayoutex [0-5]
+set the layout. 
+.TP
+.B focusstack num
+focus window num in the stack.
+.TP
+.B incnmaster num
+increment the number of master windows by num.
+.TP
+.B focusmon num
+focus monitor num.
+.SH SEE ALSO
+.BR dwmc (1),
+.BR sxhkd (1)
+.BR xsetroot (1)
+.SH ISSUES
+This documentation is not complete.
+.SH BUGS
+Send all bug reports with a patch to ben@benoneill.xyz.
