@@ -1,4 +1,4 @@
-*.orig
-*.rej
-larbs.pdf
 patches
+*.o
+dwm
+*.tar.*
