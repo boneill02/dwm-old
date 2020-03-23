@@ -5,6 +5,10 @@ signal() {
 }
 
 case $# in
+0)
+	echo "Not enough arguments."
+	exit 1
+	;;
 1)
 	case $1 in
 	setlayout | view | viewall | togglebar | togglefloating | zoom | killclient | quit | xrdb)
