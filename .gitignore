@@ -2,3 +2,4 @@ patches
 *.o
 dwm
 *.tar.*
+config.h
