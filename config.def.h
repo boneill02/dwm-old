@@ -15,11 +15,11 @@ static const int sidepad            = 0;       /* horizontal padding of bar */
 static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
 static char dmenufont[]             = "monospace:size=10";
 static char normbgcolor[]           = "#000000";
-static char normbordercolor[]       = "#304937";
-static char normfgcolor[]           = "#39ff14";
-static char selfgcolor[]            = "#ffffff";
-static char selbordercolor[]        = "#5c2438";
-static char selbgcolor[]            = "#5c2438";
+static char normbordercolor[]       = "#222222";
+static char normfgcolor[]           = "#bbbbbb";
+static char selfgcolor[]            = "#eeeeee";
+static char selbordercolor[]        = "#cccccc";
+static char selbgcolor[]            = "#005577";
 
 static char *colors[][3] = {
        /*               fg           bg           border   */
